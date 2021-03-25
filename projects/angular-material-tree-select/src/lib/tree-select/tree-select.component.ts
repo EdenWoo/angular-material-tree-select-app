@@ -18,7 +18,7 @@ export const TREE_SELECT_VALUE_ACCESSOR: any = {
 })
 export class TreeSelectComponent implements OnInit {
   label;
-  model$;
+  model = [{name: '1'}, {name: '2'}];
   selectable;
   removable = true;
 
@@ -36,7 +36,6 @@ export class TreeSelectComponent implements OnInit {
 
   modelChange: (value: any) => void;
   modelTouched: (value: any) => void;
-  model: any;
 
   constructor() {
   }
