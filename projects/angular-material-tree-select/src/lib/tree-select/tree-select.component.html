@@ -1,4 +1,4 @@
-<mat-form-field class="w-full" appearance="outline">
+<mat-form-field appearance="outline">
   <mat-label>{{label}}</mat-label>
   <mat-chip-list #chipList aria-label="">
     <mat-chip
@@ -8,12 +8,10 @@
       {{item.name}}
       <mat-icon *ngIf="removable" matChipRemove>cancel</mat-icon>
     </mat-chip>
-    <!--      <input-->
-    <!--        placeholder="Click To Edit"-->
-    <!--        #seachInput-->
-    <!--        (click)="openModal()"-->
-    <!--        [formControl]="formControl"-->
-    <!--        [matChipInputFor]="chipList"-->
-    <!--        [matChipInputSeparatorKeyCodes]="separatorKeysCodes">-->
+    <input
+      placeholder="Select"
+      [formControl]="formControl"
+      [matChipInputFor]="chipList"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
   </mat-chip-list>
 </mat-form-field>
