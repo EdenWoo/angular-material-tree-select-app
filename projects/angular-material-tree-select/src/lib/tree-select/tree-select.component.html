@@ -1,1 +1,21 @@
-<p>tree-select works!</p>
+<form class="w-full">
+  <mat-form-field class="w-full" appearance="outline">
+    <mat-label>{{label}}</mat-label>
+    <mat-chip-list #chipList aria-label="">
+      <mat-chip
+        *ngFor="let item of model$ | async"
+        [selectable]="selectable"
+        [removable]="removable">
+        {{item.name}}
+        <mat-icon *ngIf="removable" matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <!--      <input-->
+      <!--        placeholder="Click To Edit"-->
+      <!--        #seachInput-->
+      <!--        (click)="openModal()"-->
+      <!--        [formControl]="formControl"-->
+      <!--        [matChipInputFor]="chipList"-->
+      <!--        [matChipInputSeparatorKeyCodes]="separatorKeysCodes">-->
+    </mat-chip-list>
+  </mat-form-field>
+</form>
