@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "angular-material-tree-select": [
+        "dist/angular-material-tree-select/angular-material-tree-select",
+        "dist/angular-material-tree-select"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
